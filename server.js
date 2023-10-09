@@ -4,7 +4,8 @@ const path = require("path");
 const app = express();
 app.use(express.json());
 app.use(express.static("express"));
-// URL padrão do site
+
+// URL default
 app.use("/", (req, res) => {
   res.sendFile(path.join(__dirname + "/application/index.html"));
 });
